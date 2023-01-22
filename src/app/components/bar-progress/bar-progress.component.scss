@@ -1,0 +1,51 @@
+nav{
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    img{
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    p{
+        font-size: 20px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        color: #fe4a4b;
+    }
+    span{
+        visibility: hidden;
+    }
+    .bar{
+        position: relative;
+        background-color: #e5e5e5;
+        width: 300px;
+        height: 20px;
+        border-radius: 13px;
+    }
+    .progress{
+        top: 0;
+        background-color: #e5e5e5;
+        width: 60px;
+        height: 20px;
+        border-radius: 13px;
+        background-color: #58cc00;
+        position: absolute;
+    }
+    .progress-item{
+        top: 5px;
+        left: 8px;
+        background-color: #e5e5e5;
+        width: 40px;
+        height: 10px;
+        padding: 2px;
+        border-radius: 13px;
+        background-color:#7ad633;
+        position: absolute;
+    }
+}

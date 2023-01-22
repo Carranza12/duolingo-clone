@@ -1,0 +1,32 @@
+footer{
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    bottom: 0;
+    height: 150px;
+    width: 400px;
+    margin: 0 auto;
+    margin-top: -150px;
+    background-color: #ffdfdf;
+    gap: 20px;
+    padding: 20px;
+    h3{
+        padding-left: 10px;
+        color: #ea2a2a;
+        font-size: 22px;
+        text-align: left;
+        font-weight: 800;
+    }
+    p{
+        padding-left: 10px;
+        color: #ea2a2a;
+        margin-top:-20px;
+        font-weight: 500;
+    }
+    .btn-primary{
+        background-color: #fe4a4b;
+        border-bottom: 4px solid #ea2a2a ;
+    }
+}

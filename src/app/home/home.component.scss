@@ -1,0 +1,39 @@
+main{
+    max-width: 400px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 120px;
+    section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 15px;
+        img{
+            width: 250px;
+        }
+        h2{
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 32px;
+        }
+        p{
+            color:var(--font-secondary);
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+    footer{
+        height: 90px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+   
+}
