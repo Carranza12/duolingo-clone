@@ -1,0 +1,72 @@
+[
+    {
+        "type":"multiple-option",
+        "label":" Daniel’s behaviour is bad, but Brian’s is......",
+        "answers":[
+            {
+                "label":"much worst",
+                "isCorrect": false
+            },
+            {
+                "label":"more worset",
+                "isCorrect": false
+            },
+            {
+                "label":" much worse",
+                "isCorrect": true
+            },
+            {
+                "label":"worst",
+                "isCorrect": false
+            }
+        ]
+    },
+    {
+        "type":"multiple-picture",
+        "label":"How do you say 'hogar' in english?",
+        "answers":[
+            {
+                "label":"house",
+                "isCorrect": true,
+                "src":"https://cdn-icons-png.flaticon.com/512/1670/1670080.png"
+            },
+            {
+                "label":"restaurant",
+                "isCorrect": false,
+                "src":"https://upload.wikimedia.org/wikipedia/commons/a/a2/Restaurante.png"
+            },
+            {
+                "label":"shop",
+                "isCorrect": false,
+                "src":"https://images.freeimages.com/fic/images/icons/2718/pretty_office_icon_set_part_11/512/shop.png"
+            },
+            {
+                "label":"factory",
+                "isCorrect": false,
+                "src":"https://cdn-icons-png.flaticon.com/512/1908/1908047.png"
+            }
+        ]
+    },
+    {
+        "type":"multiple-option",
+        "label":"They ………………….a photo when I was on the podium",
+        "answers":[
+            {
+                "label":"were taken",
+                "isCorrect": true
+            },
+            {
+                "label":"had taken",
+                "isCorrect": false
+            },
+            {
+                "label":"are taking",
+                "isCorrect": false
+            },
+            {
+                "label":"took",
+                "isCorrect": false
+            }
+        ]
+    }
+]
