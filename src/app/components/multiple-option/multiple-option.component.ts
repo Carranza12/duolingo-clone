@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { answer, Question } from 'src/app/interfaces/Question';
+import { FormService } from 'src/app/services/form.service';
 
 @Component({
   selector: 'app-multiple-option',
@@ -8,18 +9,29 @@ import { answer, Question } from 'src/app/interfaces/Question';
 })
 export class MultipleOptionComponent implements OnInit {
   @Input() question!:Question;
+  @Input() step!:number;
+  @Output() continue = new EventEmitter();
 
-  constructor() { }
+
+  public answered:boolean = false;
+  public answerSelected!:answer;
+
+  constructor(private _form:FormService) { }
 
   ngOnInit(): void {
-    console.log('probando..')
-    console.log(this.question)
   }
 
   public selectAnswer(answer:answer){
-    console.log(answer)
-    alert('ckick!')
+    this.answered = true;
+    this.answerSelected = answer;
+   
   }
+
+  next(event:Event){
+    this.continue.emit(event)
+  }
+
+
  
 
 }

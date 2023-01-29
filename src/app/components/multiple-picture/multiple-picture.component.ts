@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Question } from 'src/app/interfaces/Question';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { answer, Question } from 'src/app/interfaces/Question';
 
 @Component({
   selector: 'app-multiple-picture',
@@ -8,12 +8,23 @@ import { Question } from 'src/app/interfaces/Question';
 })
 export class MultiplePictureComponent implements OnInit {
   @Input() question!:Question;
+  @Input() step!:number;
+  @Output() continue = new EventEmitter();
+  
+  public answered:boolean = false;
+  public answerSelected!:answer;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  test(){
-    alert('test!')
+  public selectAnswer(answer:answer){
+    this.answered = true;
+    this.answerSelected = answer;
+  }
+
+  next(event:Event){
+    this.continue.emit(event)
   }
 }

@@ -5,6 +5,7 @@ import { MultiplePictureComponent } from './components/multiple-picture/multiple
 import { BarProgressComponent } from './components/bar-progress/bar-progress.component';
 import { CorrectMessageComponent } from './components/correct-message/correct-message.component';
 import { IncorrectMesageComponent } from './components/incorrect-mesage/incorrect-mesage.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 
 
@@ -14,7 +15,8 @@ import { IncorrectMesageComponent } from './components/incorrect-mesage/incorrec
     MultiplePictureComponent,
     BarProgressComponent,
     CorrectMessageComponent,
-    IncorrectMesageComponent
+    IncorrectMesageComponent,
+    FormsComponent
   ],
   imports: [
     CommonModule
@@ -24,7 +26,8 @@ import { IncorrectMesageComponent } from './components/incorrect-mesage/incorrec
     MultiplePictureComponent,
     BarProgressComponent,
     CorrectMessageComponent,
-    IncorrectMesageComponent
+    IncorrectMesageComponent,
+    FormsComponent
   ]
 })
 export class SharedModule { }

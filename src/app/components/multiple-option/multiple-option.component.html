@@ -1,8 +1,27 @@
 <main *ngIf="question">
-    <h3>{{question.label}}</h3>
-    <section class="answers" *ngFor="let answer of question.answers">
-        <button type="button" class="answer btn btn-question" (click)='selectAnswer(answer)' >
-            {{answer.label}}
-        </button>
-    </section>
+  <h3>{{ question.label }}</h3>
+  <section
+    class="answers"
+    [ngClass]="{ 'active-z-index': answered }"
+    *ngFor="let answer of question.answers"
+  >
+    <button
+      type="button"
+      class="answer btn btn-question"
+      (click)="selectAnswer(answer)"
+    >
+      {{ answer.label }}
+    </button>
+  </section>
 </main>
+
+<app-correct-message
+  *ngIf="answered && answerSelected.isCorrect"
+  [step]="step"
+  (continue)="next($event)"
+></app-correct-message>
+<app-incorrect-mesage
+  *ngIf="answered && !answerSelected.isCorrect"
+  [step]="step"
+  (continue)="next($event)"
+></app-incorrect-mesage>

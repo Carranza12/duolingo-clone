@@ -14,7 +14,6 @@ main{
         text-align: left;
     }
     .cards{
-        z-index:-1;
         height: 600px;
         width: 100%;
         padding-top: 30px;
@@ -32,21 +31,21 @@ main{
             gap: 20px;
             height: 200px;
             padding: 10px;
-            width: 160px;
+            width: 140px;
             border: 2px solid var(--font-secondary);
             border-bottom: 4px solid var(--font-secondary);
             border-radius: 13px;
-            cursor: pointer;
             img {
                 width: 100px;
             }
         }
-        .card_selected{
-            border: 2px solid #84d7ff;
-            border-bottom: 4px solid #84d7ff;
-            color: #1cb0f6;
-            background: #ddf4ff;
-           
-        }
+      
     }
+}
+
+.card_selected{
+    border: 2px solid #84d7ff;
+    border-bottom: 4px solid #84d7ff;
+    color: #1cb0f6;
+    background: #ddf4ff;
 }

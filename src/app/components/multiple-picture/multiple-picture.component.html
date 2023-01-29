@@ -1,23 +1,27 @@
-<main>
-    <h3>
-        Which of these is "the woman"?
-    </h3>
-    <section class="cards">
-        <div class="card" (click)="test()">
-            <img src="https://eltallerdehector.com/wp-content/uploads/2022/06/8440a-nina-pocoyo-png.png" alt="">
-            <p>la niña</p>
-        </div>
-        <div class="card">
-            <img src="https://eltallerdehector.com/wp-content/uploads/2022/06/8440a-nina-pocoyo-png.png" alt="">
-            <p>la niña</p>
-        </div>
-        <div class="card">
-            <img src="https://eltallerdehector.com/wp-content/uploads/2022/06/8440a-nina-pocoyo-png.png" alt="">
-            <p>la niña</p>
-        </div>
-        <div class="card card_selected">
-            <img src="https://eltallerdehector.com/wp-content/uploads/2022/06/8440a-nina-pocoyo-png.png" alt="">
-            <p>la niña</p>
-        </div>
-    </section>
+<main *ngIf="question">
+  <h3>
+    {{ question.label }}
+  </h3>
+  <section class="cards">
+    <div
+      class="card"
+      [ngClass]="{'active-z-index': answered, 'card_selected' : answerSelected && answerSelected.label === item.label }"
+      (click)="selectAnswer(item)"
+      *ngFor="let item of question.answers"
+    >
+      <img [src]="item.src" alt="" />
+      <p>{{ item.label }}</p>
+    </div>
+  </section>
 </main>
+
+<app-correct-message
+  *ngIf="answered && answerSelected.isCorrect"
+  (continue)="next($event)"
+  [step] = "step"
+></app-correct-message>
+<app-incorrect-mesage
+  *ngIf="answered && !answerSelected.isCorrect"
+  (continue)="next($event)"
+  [step] = "step"
+></app-incorrect-mesage>
