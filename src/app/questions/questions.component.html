@@ -1,7 +1,7 @@
 
-<app-bar-progress></app-bar-progress>
-<app-multiple-option></app-multiple-option>
-<!--<app-multiple-picture>
-</app-multiple-picture>-->
-<app-correct-message></app-correct-message>
-<!--<app-incorrect-mesage></app-incorrect-mesage>-->
+    <app-bar-progress></app-bar-progress>
+    <app-multiple-option  *ngIf="question && question.type === 'multiple-option'" [question]="question"></app-multiple-option>
+    <app-multiple-picture  *ngIf="question && question.type === 'multiple-picture'"  [question]="question"></app-multiple-picture>
+
+<!--<app-correct-message></app-correct-message>
+<app-incorrect-mesage></app-incorrect-mesage>-->

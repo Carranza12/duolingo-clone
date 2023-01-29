@@ -1,14 +1,8 @@
-<main>
-    <h3>How do you say "i am"?</h3>
-    <section class="answers">
-        <div class="answer btn btn-question">
-            hombre
-        </div>
-        <div class="answer btn btn-question">
-            soy
-        </div>
-        <div class="answer btn btn-question">
-            mujer
-        </div>
+<main *ngIf="question">
+    <h3>{{question.label}}</h3>
+    <section class="answers" *ngFor="let answer of question.answers">
+        <button type="button" class="answer btn btn-question" (click)='selectAnswer(answer)' >
+            {{answer.label}}
+        </button>
     </section>
 </main>
